@@ -1,0 +1,10 @@
+<h1>Song Info</h1>
+
+<p>Title: <%= @song.title %></p>
+<p>Artist: <%= @song.artist_name %></p>
+<p>Genre: <%= @song.genre %></p>
+<br>
+<p>Released: <%= @song.released ? "Yes" : "No" %></p>
+<p>Release year: <%= @song.released ? @song.release_year : nil %></p>
+<br>
+<%= button_to "Delete Song", { action: "destroy", id: @song.id }, method: :delete, data: { confirm: "Are you sure?" } %>
